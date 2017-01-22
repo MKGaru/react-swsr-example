@@ -34,8 +34,10 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
     event.waitUntil(self.clients.claim());
 });
-// ここで明示的にupdateしても、service.jsに割り当てられているmax-ageの期間はdisk cacheを参照してしまうらしい
-self.registration.update();
+self.addEventListener('sync', function (event) {
+    // ここで明示的にupdateしても、service.jsに割り当てられているmax-ageの期間はdisk cacheを参照してしまうらしい
+    self.registration.update();
+});
 
 
 /***/ }),

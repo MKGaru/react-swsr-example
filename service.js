@@ -2,4 +2,4 @@ self.window = self;
 importScripts('vendor.js');
 importScripts('pages.js');
 importScripts('service.body.js');
-/* ad5aed7dac3da27a7a5e */
+/* 74b9f675b26963f2aec0 */
