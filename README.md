@@ -1,4 +1,4 @@
-React SeriveWorkerSideRendering Example
+[WIP]React SeriveWorkerSideRendering Example
 =======================================
 
 make ssr & offline-first friendly code.
