@@ -1,4 +1,4 @@
-const window = self.window = self;
+self.window = self;
 importScripts('vendor.js');
 importScripts('pages.js');
 importScripts('service.body.js');
