@@ -47,7 +47,8 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin(['pages','vendor']),
 		new CleanWebpackPlugin(['dist']),
 		new CopyWebpackPlugin([
-			{ from: 'client/index.html' }
+			{ from: 'client/index.html' },
+			{ from: 'client/setup.js' }
 		],{
 			copyUnmodified: false
 		}),
@@ -63,7 +64,7 @@ module.exports = {
 				const fs = compilation.compiler.outputFileSystem;
 				const filepath = path.join(compilation.options.output.path,'./service.js');
 				fs.writeFile(filepath,[
-					`const window = self.window = self;`,
+					`self.window = self;`,
 					`importScripts('vendor.js');`,
 					`importScripts('pages.js');`,
 					`importScripts('service.body.js');`,

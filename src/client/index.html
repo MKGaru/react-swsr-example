@@ -3,22 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Title</title>
-	<base href="/">
-	<script>
-		var reloadTimer = setTimeout(function(){ location.reload() },3000);
-		navigator.serviceWorker&&navigator.serviceWorker.register('service.js')
-			.then(function(){return navigator.serviceWorker.ready})
-			.then(function(){
-			    clearTimeout(reloadTimer);
-				return navigator.serviceWorker.controller || new Promise(function(resolve) {
-					navigator.serviceWorker.addEventListener('controllerchange', resolve);
-				})
-			})
-			.then(function(){return fetch('app')})
-			.then(function(response){return response.text()})
-			.then(function(text){document.body.innerHTML=text})
-			.catch(console.error);
-	</script>
+	<script src="setup.js"></script>
 </head>
 <body>
 	<!-- should static pre-render here -->
