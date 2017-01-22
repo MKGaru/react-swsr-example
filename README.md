@@ -12,6 +12,7 @@ Tech
 ✔ serviceworker  
 ✔ react  
 ✔ react-router  
+✔ semantic-ui-react  
 
 :x:WITHOUT  
 ✖ ~~babel~~(only typescript2)  
@@ -27,4 +28,4 @@ Usage
 
 Demo
 --------------------------------------
-* [simple counter](https://mkgaru.github.io/react-swsr-example/)
+* [~~example~~](#) not ready

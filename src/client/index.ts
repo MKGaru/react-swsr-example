@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {App} from '../service/pages/App';
+import {Home} from '../service/pages/Home';
 
 export { React,ReactDOM }
 
-ReactDOM.render(React.createElement(App),<any>document);
+ReactDOM.render(React.createElement(Home),<any>document);

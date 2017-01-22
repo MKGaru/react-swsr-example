@@ -2,7 +2,7 @@ import * as React from 'react';
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 
-import {App} from './pages/App'
+import {Home} from './pages/Home'
 
 async function parseRequestData(request:Request){
 	let data = Object.fromQueryString( (request.url.match(/\?(.*)$/)||[,''])[1] );
@@ -32,8 +32,8 @@ export namespace Router {
 
 		return event.respondWith(new Promise((resolve)=>{
 			match({ routes:[
-				{ path:'/app', component:App }
-			], location: `${path||'app'}?${queryString}` }, async (error, redirectLocation, renderProps) => {
+				{ path:'/home', component:Home }
+			], location: `${path||'home'}?${queryString}` }, async (error, redirectLocation, renderProps) => {
 				let response:Response;
 				if(error){
 					response = new Response(error.message,{status:500,headers:{'Content-Type':'text/plain'}});

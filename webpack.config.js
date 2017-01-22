@@ -11,7 +11,7 @@ module.exports = {
 		'service.body': './service/index.ts',
 		client: './client/index.ts',
 		pages: glob.sync('./src/service/**/*.tsx').map(file=>'./'+file.substr('./src'.length)),
-		vendor: ['tslib','sugar','sugar/locales/ja','react','react-dom','react-dom/server','react-router']
+		vendor: ['tslib','sugar','sugar/locales/ja','react','react-dom','react-dom/server','react-router','semantic-ui-react']
 	},
 	output: {
 		jsonpFunction:'_w_e_b_p_a_c_k_',
